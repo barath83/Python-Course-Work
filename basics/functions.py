@@ -37,6 +37,7 @@ From function's perspective
 '''
 If we don't the specific number of arguments that will be passed to our function, add a * before the parameter name in function definition
 So that the function receives a tuple of arguments and can access items accordingly
+*args
 '''
 
 def functionargs(*suits):
@@ -44,4 +45,48 @@ def functionargs(*suits):
 
 functionargs("Mike","Harvey","Donna");    
 
-    
+
+#Keyword arguments 
+
+'''
+Arguments can also be sent as key=value syntax
+By this way the order of the arguments doesn't matter
+*kwargs
+'''
+
+def functionkeyargs(char1,char3,char2):
+    print("The Lead Character is "+char1)
+
+functionkeyargs(char2 = "Mike",char1 = "Harvey",char3 ="Donna");    
+
+
+#Arbitrary Keyword Arguments 
+
+'''
+If we cannot specify the number of keyword arguments to be passed to the function
+add two asterik ** before the parameter in function definition
+**kwargs
+'''
+def functionkwargs(**suits):
+    print("The Underdog Suits Character is "+suits["rookie"])
+
+functionkwargs(rookie = "Mike",pro = "Harvey",bosslady = "Donna");    
+
+
+#Default parameter value
+
+def deffunction(name="Pearson Hardman"):
+    print("Suits Firm is "+name)
+
+deffunction("Pearson Specter Litt")
+deffunction("Zane Specter Litt")
+#no argument passed so it takes the def value in the function definition
+deffunction()        
+
+
+#pass
+#function defintions cannot be empty but if we want it that way we can have function definition with no content
+#but a pass statement
+
+def myfunction():
+  pass
